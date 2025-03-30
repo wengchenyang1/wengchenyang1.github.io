@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,25 @@
     <link rel="stylesheet" href="../css/styles.css">
     <script>
         function obfuscateEmail() {
-            var user = "chenyang.weng";
-            var domain = "icloud.com";
-            var email = user + "@" + domain;
-            document.getElementById("email-link").href = "mailto:" + email;
-            document.getElementById("email-link").textContent = email;
+            var encodedEmail = "Y2hlbnlhbmcud2VuZ0BpY2xvdWQuY29t";
+            var decodedEmail = atob(encodedEmail);
+            document.getElementById("email-link").href = "mailto:" + decodedEmail;
+            document.getElementById("email-link").textContent = decodedEmail;
         }
         window.onload = obfuscateEmail;
     </script>
 </head>
+
 <body>
     <header>
         <h1>Support</h1>
     </header>
     <section>
-        <p>Contact us at <a id="email-link" href="#">support@example.com</a> for any assistance.</p>
+        <p><a id="email-link" href="#">E-Mail us</a> for any assistance.</p>
     </section>
     <footer>
         <p>&copy; Chenyang Weng</p>
     </footer>
 </body>
+
 </html>

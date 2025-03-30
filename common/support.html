@@ -11,7 +11,7 @@
             var encodedEmail = "Y2hlbnlhbmcud2VuZ0BpY2xvdWQuY29t";
             var decodedEmail = atob(encodedEmail);
             document.getElementById("email-link").href = "mailto:" + decodedEmail;
-            document.getElementById("email-link").textContent = decodedEmail;
+            document.getElementById("email-link").textContent = "E-Mail us";
         }
         window.onload = obfuscateEmail;
     </script>
